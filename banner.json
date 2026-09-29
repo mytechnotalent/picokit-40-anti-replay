@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-40-anti-replay",
+  "eyebrow": "PICOKIT // LESSON 40",
+  "title": "PICOKIT // ANTI REPLAY",
+  "subtitle": "PER-NODE MONOTONIC SEQUENCE + REPLAY WINDOW + REJECTED REPLAY",
+  "accent": "#24FF37",
+  "dim": "#169E22",
+  "white": "#D5F6E2",
+  "cyan": "#7FD8E0",
+  "bg": "#021103",
+  "bg_edge": "#000501",
+  "icon": "lock",
+  "panel_status": "SEQ 21  ·  WINDOW 32  ·  REPLAY reject",
+  "chips": [
+    {
+      "label": "SEQ",
+      "value": "monotonic"
+    },
+    {
+      "label": "WINDOW",
+      "value": "32 deep"
+    },
+    {
+      "label": "REPLAY",
+      "value": "reject"
+    },
+    {
+      "label": "RADIO",
+      "value": "-30 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00040  seq 21  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 21",
+    "[+] offered seq 21 again  replay rejected",
+    "[+] verdict replayed=1  rssi -30  snr 9.0"
+  ],
+  "categories": [
+    "SEQ",
+    "WINDOW",
+    "REPLAY",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "AR-01",
+      "label": "seq",
+      "value": "+1"
+    },
+    {
+      "tag": "AR-02",
+      "label": "window",
+      "value": "32"
+    },
+    {
+      "tag": "AR-03",
+      "label": "replay",
+      "value": "reject"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  SEQ  ·  WINDOW  ·  RADIO  ==[ REPLAY ]=="
+  ],
+  "layout": "grid",
+  "stat": "monotonic"
+}
